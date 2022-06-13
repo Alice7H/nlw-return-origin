@@ -315,7 +315,7 @@ body.menu-expanded button path {
   margin-block: 1.6rem;
 }
 
-/* ============= SERVICES ========= */
+/* ============= ABOUT ========= */
 #about{
   text-align: left;
   background-color: var(--brand-beige);
@@ -326,6 +326,38 @@ body.menu-expanded button path {
 #about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
+}
+
+/* =========== TESTIMONIALS =========== */
+#testimonials header p{
+  color: var(--paragraph);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  margin-block: 2.4rem;
+  text-align: left;
+}
+#testimonials .card{
+  background-color: var(--brand-beige);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  text-align: left;
+  padding: 3.2rem;
+  margin-block: 3.2rem;
+}
+#testimonials .client{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+#testimonials .client p{
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 175%;
 }
 
 /* ============= CONTACT ========= */
@@ -431,6 +463,9 @@ footer .social-links{
     color: initial;
     background-color: initial;
     filter: initial;
+    line-height: initial;
+     border: initial;
+    border-radius: initial;
   }
   nav#navigation .close-menu,
   nav#navigation .open-menu,
@@ -457,7 +492,6 @@ footer .social-links{
     align-items: center;
     padding: 1rem 2.4rem;
     border: 1px solid var(--primary-color);
-    box-sizing: border-box;
     border-radius: 4rem;
     color: var(--primary-color);
     font-size: 1.4rem;
@@ -470,9 +504,15 @@ footer .social-links{
     border: none;
     color: white;
   }
+  nav#navigation.scroll .menu a.button.active,
+  nav#navigation.scroll .menu a.button:hover{
+    background-color: var(--primary-color);
+    filter: brightness(1.3);
+    border: none;
+  }
   nav#navigation.scroll .menu ul li a{
     color: var(--brand-light-2);
-    opacity: .6;
+    opacity: 0.6;
   }
   nav#navigation.scroll .menu a.button{
     border-color: white;
@@ -481,7 +521,7 @@ footer .social-links{
   nav#navigation .menu li a{
     transition: opacity .4s;
   }
-  nav#navigation .menu li a:active,
+  nav#navigation .menu li a.active,
   nav#navigation .menu li a:hover{
     opacity: 1;
     font-weight: 700;
@@ -490,30 +530,24 @@ footer .social-links{
     content: '';
     width: 0;
     height: 2px;
-    background-color:  var(--primary-color);
+    background-color: var(--primary-color);
     display: block;
     position: relative;
-    bottom: -2rem;
-    left: -0.7rem;
+    bottom: -2.45rem;
+    left: -1.1rem;
     transition: width 0.2s;
   }
   nav#navigation.scroll .menu li a::after{
     background-color: white;
   }
-  nav#navigation .menu li a:active:after,
-  nav#navigation .menu li a:hover:after{
-    padding-inline: 0.8rem;
-    width: 100%;
-  }
-  nav#navigation.scroll .menu li a:active,
+  nav#navigation.scroll .menu li a.active,
   nav#navigation.scroll .menu li a:hover{
     opacity: 1;
   }
-  nav#navigation.scroll .menu a.button:active,
-  nav#navigation.scroll .menu a.button:hover{
-    background-color: var(--primary-color);
-    filter: brightness(1.3);
-    border: 1px solid white;
+  nav#navigation .menu li a.active:after,
+  nav#navigation .menu li a:hover:after{
+    padding-inline: 1rem;
+    width: 100%;
   }
 
   /* ============= HOME ================ */
@@ -528,15 +562,14 @@ footer .social-links{
     grid-template-areas: 
     'A B' 
     'C C';
-  }
-  #home .col-a{
+  } #home .col-a{
     text-align: left;
     align-self: center;
   }
   #home h1{
     font-size: 5.2rem; 
   }
-  #home .content p {
+  #home .card p {
     font-size: 1.8rem;
   }
   #home .stats{
@@ -584,6 +617,23 @@ footer .social-links{
   #about .content p {
     margin-bottom: 0;
   }
+/* ============= TESTIMONIALS ================ */
+#testimonials .wrapper{ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+}
+#testimonials header{
+  width: 42%;
+  text-align: left;
+}
+#testimonials .card{
+  width: 48%;
+  flex-wrap: wrap;
+  margin-block: 0;
+}
 
 /* ============= CONTACT ================ */
   #contact .wrapper{
