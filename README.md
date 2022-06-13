@@ -4,9 +4,7 @@
 
 ## Objetivo
 
-Criar uma landing page semelhante ao layout do figma.
-
-[figma](https://www.figma.com/community/file/1102912263666619803)
+Criar uma landing page semelhante ao layout do [figma](https://www.figma.com/community/file/1102912263666619803)
 
 ## 🚀 Tecnologias
 
